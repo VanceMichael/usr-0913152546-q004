@@ -1,0 +1,1 @@
+import java.sql.*;public class App{public static void main(String[]a)throws Exception{try(Connection c=DriverManager.getConnection("jdbc:sqlite:data.db")){c.createStatement().execute("create table if not exists letters(id integer primary key,body text)");System.out.println("服务已启动");}}}
